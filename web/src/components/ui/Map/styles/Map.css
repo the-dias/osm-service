@@ -1,0 +1,74 @@
+.leaflet-container {
+  height: 100vh;
+  width: calc(100% - 240px);
+  margin-left: auto;
+  border-radius: 4px;
+}
+
+.leaflet-control-attribution {
+  display: none;
+}
+.btn_location {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 35px;
+  height: 35px;
+  background-color: white;
+  color: black;
+  font-size: 12px;
+  z-index: 1000;
+  border: 2px solid rgba(0, 0, 0, 0.3);
+  position: relative;
+  margin-top: 150px;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+.btn_location:hover {
+  background-color: #f4f4f4;
+  color: black;
+}
+
+.draggable_btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 35px;
+  height: 35px;
+  background-color: white;
+  color: black;
+  font-size: 12px;
+  z-index: 1000;
+  border: 2px solid rgba(0, 0, 0, 0.3);
+  position: relative;
+  margin-top: 5px;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+.draggable_btn:hover {
+  background-color: #f4f4f4;
+  color: black;
+}
+
+.pdf-report {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 35px;
+  height: 35px;
+  background-color: white;
+  color: black;
+  font-size: 12px;
+  z-index: 1000;
+  border: 2px solid rgba(0, 0, 0, 0.3);
+  position: relative;
+  margin-top: 5px;
+  margin-left: 10px;
+  cursor: pointer;
+}
+.pdf-report:hover {
+  background-color: #f4f4f4;
+  color: black;
+}
