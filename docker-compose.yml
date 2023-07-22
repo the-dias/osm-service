@@ -1,0 +1,46 @@
+version: "3"
+services:
+  frontend:
+    container_name: web
+    build:
+      context: ./web
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+    networks:
+      - dev
+
+  db:
+    image: postgres:14
+    container_name: postgresql
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=dias2502
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres:/var/lib/postgresql/data
+    restart: always
+    networks:
+      - dev
+
+  backend:
+    container_name: api
+    build:
+      context: ./api
+      dockerfile: Dockerfile
+    ports:
+      - "4200:4200"
+    networks:
+      - dev
+    depends_on:
+      - db
+    env_file:
+      - ./api/.env
+
+networks:
+  dev:
+
+volumes:
+  postgres:
+    name: nest-db
